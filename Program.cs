@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,18 @@ namespace Project_3
             {
                 Console.WriteLine($"{street}, {number}");
             }
+        }
+        public void Exp()
+        {
+            int i = 1;
+            object o = i;
+            int j = (int)o;
+        }
+
+        public void TestFunc(ref int i)
+        {
+            i = 10;
+            Debug.Log(i);
         }
         static void Main(string[] args)
         {
@@ -104,7 +117,7 @@ namespace Project_3
             }
             Sum(5, 7);
 
-            void Human (string name, int age)
+            void Human(string name, int age)
             {
                 Console.WriteLine($"{name}, {age}");
             }
@@ -115,6 +128,32 @@ namespace Project_3
             tower.number = 50;
 
             tower.Print();
+
+            short s1 = 0;
+            int i2 = 0;
+            long l3 = 0;
+            float f4 = 0;
+            double d5 = 0;
+            object o6 = 0;
+            double d2 = (double)o6;
+
+            i2 = (int)l3;
+            l3 = i2;
+            ushort a7 = 15050;
+            byte b8 = (byte)a7;
+
+            TestFunc(ref i2);
+
+            var c9 = 0f;
+
+            if (o6 != null)
+            {
+                int i20 = (int)o6;
+            }
+
+            int[] array = new int[10000];
+
+            List<int> list = new List<int>(80);
         }
     }
 }
